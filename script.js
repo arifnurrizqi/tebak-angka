@@ -51,7 +51,7 @@ startGame.onclick = function(){
             if( p1 == com1 ){
               hasil = 'BENAR';
               alert(`Jawaban kamu ${hasil} \nAngka yang dicari komputer ${com1}`);
-              alert(`Kamu mendapatkan skor ${i * math.round(16.6)}`);
+              alert(`Kamu mendapatkan skor ${i * 16.6}`);
               break;
             }
             else if( p1 < com1 ){
@@ -85,7 +85,7 @@ startGame.onclick = function(){
             if( p1 == com1 ){
               hasil = 'BENAR';
               alert(`Jawaban kamu ${hasil} \nAngka yang dicari komputer ${com1}`);
-              alert(`Kamu mendapatkan skor ${i * math.round(11.1)}`);
+              alert(`Kamu mendapatkan skor ${i * 11.1}`);
               break;
             }
             else if( p1 < com1 ){
@@ -119,7 +119,7 @@ startGame.onclick = function(){
               if( p1 == com1 ){
                 hasil = 'BENAR';
                 alert(`Jawaban kamu ${hasil} \nAngka yang dicari komputer ${com1}`);
-                alert(`Kamu mendapatkan skor ${i * math.round(6.6)}`);
+                alert(`Kamu mendapatkan skor ${i * 6.6}`);
                 break;
               }
               else if( p1 < com1 ){
