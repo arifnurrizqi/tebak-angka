@@ -4,7 +4,7 @@ startGame.onclick = function(){
   alert("Selamat datang di game Tebak Angka."); 
 
   //mulai game
-  alert("Jadi pada game ini kamu harus menebak angka yang akan dikocok komputer, setiap kombinasi memiliki kesempatan menebak yg berbeda-beda, Kombinasi terdiri dari 1 angka, 2 angka, 3 angka, dan 4 angka");
+  alert("Pada game ini kamu harus menebak angka yang akan dikocok komputer, setiap kombinasi memiliki kesempatan menebak yg berbeda-beda, Kombinasi terdiri dari 1 angka, 2 angka, 3 angka, dan 4 angka");
   let ulang = true;
   while(ulang){
     let kombinasi = prompt("Silahkan masukan jumlah kombinasi angka yang mau Kamu coba. \n(cukup masukan angkanya saja 1, 2, 3 atau 4)");
