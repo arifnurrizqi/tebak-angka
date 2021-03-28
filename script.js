@@ -110,10 +110,10 @@ startGame.onclick = function(){
         }
     }
     else if(kombinasi === '4'){
-      alert("Pada kombinasi ini kamu memiliki 15 kesempatan menebak");
+      alert("Pada kombinasi ini kamu memiliki 12 kesempatan menebak");
         let com1 = Math.round (Math.random () * 10000);
     
-          for(let i = 15; i > 0; i--){
+          for(let i = 13; i > 0; i--){
             let p1 = prompt(`masukan angka antara 0 - 9999 \nKamu punya ${i} kesempatan`);
             
               if( p1 == com1 ){
