@@ -10,37 +10,7 @@ startGame.onclick = function(){
     let kombinasi = prompt("Silahkan masukan jumlah kombinasi angka yang mau Kamu coba. \n(cukup masukan angkanya saja 1, 2, 3 atau 4)");
     var hasil = '';
     if( kombinasi === "1" ){
-      alert("Pada kombinasi ini kamu memiliki 3 kesempatan menebak");
-      let com1 = Math.round (Math.random () * 10);
-        for(let i = 3; i > 0; i--){
-          let p1 = prompt(`masukan angka antara 0 - 10 \nKamu punya ${i} kesempatan`);
-          
-            if( p1 == com1 ){
-              hasil = 'BENAR';
-              alert(`Jawaban kamu ${hasil} \nAngka yang dicari komputer ${com1}`);
-              alert(`Kamu mendapatkan skor ${i * 33.3}`);
-              break;
-            }
-            else if( p1 < com1 ){
-              hasil = 'SALAH';
-              alert(`Terlalu KECIL \nKesempatan kamu tinggal ${i - 1} kali`);
-            }
-            else if( p1 > com1 ){
-              hasil = 'SALAH';
-              alert(`Terlalu BESAR \nKesempatan kamu tinggal ${i - 1} kali`);
-            }
-            else{
-              alert(`Kamu memasukan jawaban yang salah`);
-            }
-        }
-        if( hasil === 'BENAR'){
-          ulang = confirm('Lagi ?');
-        }
-        else{
-          alert(`kesempatan Kamu sudah HABIS \nAngka yang dicari komputer ${com1}`);
-          alert(`Kamu mendapatkan skor 0`);
-          ulang = confirm('Lagi ?');
-        }
+      rules(3, 10, 33.3);
     }
     else if(kombinasi === '2'){
       alert("Pada kombinasi ini kamu memiliki 6 kesempatan menebak");
@@ -113,7 +83,7 @@ startGame.onclick = function(){
       alert("Pada kombinasi ini kamu memiliki 12 kesempatan menebak");
         let com1 = Math.round (Math.random () * 10000);
     
-          for(let i = 13; i > 0; i--){
+          for(let i = 12; i > 0; i--){
             let p1 = prompt(`masukan angka antara 0 - 9999 \nKamu punya ${i} kesempatan`);
             
               if( p1 == com1 ){
@@ -148,4 +118,31 @@ startGame.onclick = function(){
     }
   }
   alert("Terima kasih Sudah Bermain");
+}
+
+function rules(kesempatan, jangkauan, nilai){
+  alert(`Pada kombinasi ini kamu memiliki ${kesempatan} kesempatan menebak`);
+      let com1 = Math.round (Math.random () * jangkauan);
+        for(let i = kesempatan; i > 0; i--){
+          let p1 = prompt(`masukan angka antara 0 - ${jangkauan - 1} \nKamu punya ${i} kesempatan`);
+          
+            if( p1 == com1 ){
+              hasil = 'BENAR';
+              alert(`Jawaban kamu ${hasil} \nAngka yang dicari komputer ${com1}`);
+              alert(`Kamu mendapatkan skor ${i * nilai}`);
+              return;
+            }
+            else if( p1 < com1 ){
+              hasil = 'SALAH';
+              alert(`Terlalu KECIL \nKesempatan kamu tinggal ${i - 1} kali`);
+            }
+            else if( p1 > com1 ){
+              hasil = 'SALAH';
+              alert(`Terlalu BESAR \nKesempatan kamu tinggal ${i - 1} kali`);
+            }
+            else{
+              alert(`Kamu memasukan jawaban yang salah`);
+              return;
+            }
+        }
 }
