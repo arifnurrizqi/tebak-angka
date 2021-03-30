@@ -51,4 +51,12 @@ function rules(kesempatan, jangkauan, nilai){
               return;
             }
         }
+        if( hasil === 'BENAR'){
+          ulang = confirm('Lagi ?');
+        }
+        else{
+          alert(`kesempatan Kamu sudah HABIS \nAngka yang dicari komputer ${com1}`);
+          alert(`Kamu mendapatkan skor 0`);
+          ulang = confirm('Lagi ?');
+        }
 }
