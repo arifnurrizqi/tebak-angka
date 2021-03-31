@@ -10,12 +10,13 @@ startGame.onclick = function(){
   function rules(kesempatan, jangkauan, nilai){
     alert(`Pada kombinasi ini kamu memiliki ${kesempatan} kesempatan menebak`);
     let com1 = Math.round (Math.random () * jangkauan);
+    console.log(com1);
       for(let i = kesempatan; i > 0; i--){
         let p1 = prompt(`masukan angka antara 0 - ${jangkauan - 1} \nKamu punya ${i} kesempatan`);
           if( p1 == com1 ){
             hasil = 'BENAR';
             alert(`Jawaban kamu ${hasil} \nAngka yang dicari komputer ${com1}`);
-            alert(`Kamu mendapatkan skor ${i * nilai}`);
+            alert(`Kamu mendapatkan skor ${Math.round (i * nilai)}`);
             break;
           }
           else if( p1 < com1 ){
@@ -43,7 +44,6 @@ startGame.onclick = function(){
   }
   
   let ulang = true;
-  console.log(ulang);
   while(ulang){
     let kombinasi = prompt("Silahkan masukan jumlah kombinasi angka yang mau Kamu coba. \n(cukup masukan angkanya saja 1, 2, 3 atau 4)");
     if( kombinasi === "1" ){
@@ -56,7 +56,7 @@ startGame.onclick = function(){
       rules(9, 1000, 11.1); //pemanggilan fungsi dengan beberapa argument
     }
     else if(kombinasi === '4'){
-      rules(12, 10000, 6.6); //pemanggilan fungsi dengan beberapa argument
+      rules(12, 10000, 8.3); //pemanggilan fungsi dengan beberapa argument
     }
     else{
       alert("Kamu Memasukan jawaban yang salah");

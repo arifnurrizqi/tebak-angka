@@ -3,23 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   <title>Tebak Angka</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    body{
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      background:#39b7dd;
+    }
+    .hvr-shadow {
+          display: inline-block;
+          vertical-align: middle;
+          -webkit-transform: perspective(1px) translateZ(0);
+          transform: perspective(1px) translateZ(0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+          -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+          -webkit-transition-property: box-shadow;
+          transition-property: box-shadow;
+    }
+    .hvr-shadow:hover, .hvr-shadow:focus, .hvr-shadow:active {
+      box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+    }
+    .love{
+      color: #ff0000 !important;
+    }    
+    .footer{
+      margin-top: 5% !important;
+      margin-bottom: 30px;
+    }
+  </style>
 </head>
 <body>
-  <div id="wrapper">
-    <a href="#" class="my-super-cool-btn">
-      <div class="dots-container">
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-      </div>
-      <span id="startGame">Play!</span>
-    </a>
+  <div class="container">
+    <header class="mt-5">
+      <h1>Tebak Angka</h1>
+      <p>Tekan tombol start untuk memulai game!</p>
+    </header>
+    <main class="mt-5">
+      <div class="btn btn-outline-light btn-primary hvr-shadow btn-lg" role="button" id="startGame">start</div>
+    </main>
+    <footer class="footer mt-5">
+        <h6>Made With <span class="love">♥</span> in Purwokerto, Indonesia</h6>
+        <div class="copyright">
+          &copy; 2021 <strong><span>Arif Nur Rizqi</span></strong> • All Rights Reserved
+        </div>
+    </footer>
   </div>
-  <script src = "script.js" charset="utf-8">
-  </script>
+
+  <script src = "script.js"></script>
 </body>
 </html>
