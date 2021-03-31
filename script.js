@@ -113,13 +113,13 @@ startGame.onclick = function(){
       alert("Pada kombinasi ini kamu memiliki 12 kesempatan menebak");
         let com1 = Math.round (Math.random () * 10000);
     
-          for(let i = 13; i > 0; i--){
+          for(let i = 12; i > 0; i--){
             let p1 = prompt(`masukan angka antara 0 - 9999 \nKamu punya ${i} kesempatan`);
             
               if( p1 == com1 ){
                 hasil = 'BENAR';
                 alert(`Jawaban kamu ${hasil} \nAngka yang dicari komputer ${com1}`);
-                alert(`Kamu mendapatkan skor ${i * 6.6}`);
+                alert(`Kamu mendapatkan skor ${i * 8.3}`);
                 break;
               }
               else if( p1 < com1 ){
