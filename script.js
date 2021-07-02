@@ -1,4 +1,4 @@
-var startGame = document.getElementById('startGame');
+const startGame = document.getElementById('startGame');
 startGame.onclick = function(){
 
   alert("Selamat datang di game Tebak Angka."); 
